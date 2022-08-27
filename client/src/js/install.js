@@ -7,17 +7,17 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 butInstall.addEventListener('click', async () => {
-    const promptEvent = window.defferedPrompt;
+    const promptEvent = window.deferredPrompt;
     
     if (!promptEvent) {
         return;
     }
 
     promptEvent.prompt();
-    window.defferedPrompt = null;
+    window.deferredPrompt = null;
     butInstall.classList.toggle('hidden', true);
 });
 
 window.addEventListener('appinstalled', (event) => {
-    window.defferedPrompt = null;
+    window.deferredPrompt = null;
 });
